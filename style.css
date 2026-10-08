@@ -639,5 +639,74 @@ footer {
     .contact-buttons .btn {
         width: 200px;
     }
+/* ===== MOVING BACKGROUND ===== */
 
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(100px);
+    opacity: 0.25;
+}
+
+body::before {
+    top: -150px;
+    left: -150px;
+    background: #4f46e5;
+    animation: moveBackground1 8s ease-in-out infinite alternate;
+}
+
+body::after {
+    right: -150px;
+    bottom: -150px;
+    background: #9333ea;
+    animation: moveBackground2 10s ease-in-out infinite alternate;
+}
+
+@keyframes moveBackground1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(300px, 200px);
+    }
+
+    100% {
+        transform: translate(100px, 500px);
+    }
+}
+
+@keyframes moveBackground2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-300px, -200px);
+    }
+
+    100% {
+        transform: translate(-100px, -500px);
+    }
+}
+
+/* Keep website content above the animation */
+
+.navbar,
+.hero,
+.section,
+footer {
+    position: relative;
+    z-index: 1;
 }
