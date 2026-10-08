@@ -4,9 +4,8 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const root = document.documentElement;
 
-  /* theme: saved choice, else system setting */
-  const saved = localStorage.getItem('theme');
-  root.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  /* theme: saved choice, default is dark purple */
+  root.dataset.theme = localStorage.getItem('theme') || 'dark';
   $('#themeBtn').addEventListener('click', () => {
     const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
     root.dataset.theme = next;
