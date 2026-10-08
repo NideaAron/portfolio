@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aron Nidea | Portfolio</title>
+    <title>Aron Nidea | BSIT Student</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,70 +12,41 @@
 <body>
 
     <!-- Navigation -->
-    <header>
+    <nav class="navbar">
+        <div class="nav-container">
 
-        <nav class="navbar">
+            <a href="#home" class="logo">Aron Nidea</a>
 
-            <div class="logo">
-                Aron Nidea
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
             </div>
 
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
+        </div>
+    </nav>
 
 
-    <!-- HOME -->
+    <!-- Home -->
     <section id="home" class="hero">
 
         <div class="hero-content">
 
             <div class="hero-text">
 
-                <p class="greeting">
-                    HELLO, I'M
-                </p>
+                <p class="greeting">HELLO, I'M</p>
 
-                <h1>
-                    Aron Nidea
-                </h1>
+                <h1>Aron Nidea</h1>
 
-                <h2>
-                    BSIT Student & Aspiring IT Professional
-                </h2>
+                <h2>BSIT Student & Aspiring IT Professional</h2>
 
                 <p class="intro">
-                    I am a Bachelor of Science in Information Technology
-                    student interested in web development, programming,
-                    databases, and emerging technologies.
+                    I am a Bachelor of Science in Information Technology student
+                    interested in web development, database management,
+                    programming, and emerging technologies.
                 </p>
 
                 <div class="hero-buttons">
@@ -85,7 +55,9 @@
                         View Projects
                     </a>
 
-                    <a href="Aron_Nidea_Resume.pdf" class="btn secondary-btn" target="_blank">
+                    <a href="Aron_Nidea_Resume.pdf"
+                       class="btn secondary-btn"
+                       target="_blank">
                         Download Resume
                     </a>
 
@@ -93,8 +65,6 @@
 
             </div>
 
-
-            <!-- PROFILE PHOTO -->
 
             <div class="hero-photo">
 
@@ -107,85 +77,78 @@
     </section>
 
 
-    <!-- ABOUT -->
+    <!-- About -->
     <section id="about" class="section">
 
-        <div class="section-title">
+        <div class="container">
 
-            <p>
-                GET TO KNOW ME
+            <h2 class="section-title">About Me</h2>
+
+            <p class="section-text">
+                I am a BSIT student developing my skills in programming,
+                web development, database systems, and computer technologies.
+                I enjoy creating projects that allow me to apply what I learn
+                in school to practical situations.
             </p>
 
-            <h2>
-                About Me
-            </h2>
+            <p class="section-text">
+                My goal is to continuously improve my technical skills,
+                gain real-world experience, and build useful and meaningful
+                technology solutions.
+            </p>
 
         </div>
 
-
-        <div class="about-content">
-
-            <div class="about-text">
-
-                <p>
-                    I am Aron Nidea, a Bachelor of Science in Information
-                    Technology student from the Polytechnic University of
-                    the Philippines - Calauan Campus.
-                </p>
-
-                <p>
-                    I am continuously developing my skills in web development,
-                    programming, database management, and information
-                    technology through academic projects and hands-on
-                    activities.
-                </p>
-
-                <p>
-                    I enjoy learning new technologies and creating practical
-                    projects that help me improve as an IT student.
-                </p>
-
-            </div>
+    </section>
 
 
-            <div class="about-info">
+    <!-- Skills -->
+    <section id="skills" class="section">
 
-                <div class="info-box">
+        <div class="container">
 
-                    <h3>
-                        Education
-                    </h3>
+            <h2 class="section-title">Skills</h2>
 
-                    <p>
-                        BS Information Technology
-                    </p>
+            <div class="skills-grid">
 
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Building the structure of websites.</p>
                 </div>
 
-
-                <div class="info-box">
-
-                    <h3>
-                        Focus
-                    </h3>
-
-                    <p>
-                        Web Development & Database
-                    </p>
-
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <p>Designing and styling responsive websites.</p>
                 </div>
 
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Adding interaction and functionality to websites.</p>
+                </div>
 
-                <div class="info-box">
+                <div class="skill-card">
+                    <h3>PostgreSQL</h3>
+                    <p>Working with relational databases and SQL queries.</p>
+                </div>
 
-                    <h3>
-                        Location
-                    </h3>
+                <div class="skill-card">
+                    <h3>SQL</h3>
+                    <p>Creating, managing, and querying databases.</p>
+                </div>
 
-                    <p>
-                        Laguna, Philippines
-                    </p>
+                <div class="skill-card">
+                    <h3>Git & GitHub</h3>
+                    <p>Managing projects and source code repositories.</p>
+                </div>
 
+                <div class="skill-card">
+                    <h3>PHP / Laravel</h3>
+                    <p>Developing web applications and backend functionality.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Python / YOLOv5</h3>
+                    <p>Working with Python and basic object detection.</p>
                 </div>
 
             </div>
@@ -195,347 +158,100 @@
     </section>
 
 
-    <!-- SKILLS -->
-    <section id="skills" class="section gray-section">
-
-        <div class="section-title">
-
-            <p>
-                WHAT I WORK WITH
-            </p>
-
-            <h2>
-                Skills
-            </h2>
-
-        </div>
-
-
-        <div class="skills-grid">
-
-            <div class="skill-card">
-
-                <h3>
-                    HTML
-                </h3>
-
-                <p>
-                    Creating structured and semantic web pages.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    CSS
-                </h3>
-
-                <p>
-                    Designing responsive and user-friendly websites.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    JavaScript
-                </h3>
-
-                <p>
-                    Adding interaction and functionality to websites.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    PostgreSQL
-                </h3>
-
-                <p>
-                    Creating and managing relational databases.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    SQL
-                </h3>
-
-                <p>
-                    Writing queries and working with structured data.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    Git & GitHub
-                </h3>
-
-                <p>
-                    Managing projects and source code repositories.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    PHP / Laravel
-                </h3>
-
-                <p>
-                    Learning server-side web development.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    Python / YOLOv5
-                </h3>
-
-                <p>
-                    Exploring programming and object detection.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
+    <!-- Projects -->
     <section id="projects" class="section">
 
-        <div class="section-title">
+        <div class="container">
 
-            <p>
-                MY RECENT WORK
-            </p>
+            <h2 class="section-title">Projects</h2>
 
-            <h2>
-                Projects
-            </h2>
+            <div class="projects-grid">
 
-        </div>
+                <div class="project-card">
 
+                    <h3>Web Development Project</h3>
 
-        <div class="projects-grid">
+                    <p>
+                        A web development project created using HTML, CSS,
+                        and JavaScript and managed through GitHub.
+                    </p>
 
-
-            <!-- PROJECT 1 -->
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    01
-                </div>
-
-                <h3>
-                    Web Development Project
-                </h3>
-
-                <p>
-                    A web development project created to practice HTML,
-                    website structure, and GitHub repository management.
-                </p>
-
-                <div class="project-tags">
-
-                    <span>HTML</span>
-                    <span>Git</span>
-                    <span>GitHub</span>
+                    <a href="https://github.com/NideaAron/webdev-week1-Nidea"
+                       target="_blank"
+                       class="project-link">
+                        View Project →
+                    </a>
 
                 </div>
 
-                <a
-                    href="https://github.com/NideaAron/webdev-week1-Nidea"
-                    target="_blank"
-                    class="project-link">
 
-                    View Repository →
+                <div class="project-card">
 
-                </a>
+                    <h3>PostgreSQL Database Projects</h3>
 
-            </div>
-
-
-            <!-- PROJECT 2 -->
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    02
-                </div>
-
-                <h3>
-                    PostgreSQL Database Projects
-                </h3>
-
-                <p>
-                    Database activities involving SQL queries, indexes,
-                    views, materialized views, transactions, and
-                    database optimization.
-                </p>
-
-                <div class="project-tags">
-
-                    <span>PostgreSQL</span>
-                    <span>SQL</span>
-                    <span>pgAdmin</span>
+                    <p>
+                        Database activities involving PostgreSQL,
+                        SQL queries, indexes, views, materialized views,
+                        transactions, and triggers.
+                    </p>
 
                 </div>
 
-                <a href="#" class="project-link">
-                    Academic Project →
-                </a>
 
-            </div>
+                <div class="project-card">
 
+                    <h3>Online Store Database</h3>
 
-            <!-- PROJECT 3 -->
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    03
-                </div>
-
-                <h3>
-                    Online Store Database
-                </h3>
-
-                <p>
-                    A relational database designed for an online store
-                    containing customers, products, orders, and
-                    order items.
-                </p>
-
-                <div class="project-tags">
-
-                    <span>PostgreSQL</span>
-                    <span>SQL</span>
-                    <span>Database Design</span>
+                    <p>
+                        A relational database design for an online store
+                        containing customers, products, orders, and order items.
+                    </p>
 
                 </div>
 
-                <a href="#" class="project-link">
-                    Academic Project →
-                </a>
 
-            </div>
+                <div class="project-card">
 
+                    <h3>YOLOv5 Object Detection</h3>
 
-            <!-- PROJECT 4 -->
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    04
-                </div>
-
-                <h3>
-                    YOLOv5 Object Detection
-                </h3>
-
-                <p>
-                    An object detection project using YOLOv5 and a
-                    custom dataset for training and detecting objects.
-                </p>
-
-                <div class="project-tags">
-
-                    <span>Python</span>
-                    <span>YOLOv5</span>
-                    <span>AI</span>
+                    <p>
+                        An object detection project using YOLOv5 and Python,
+                        including webcam-based object detection and custom
+                        object training.
+                    </p>
 
                 </div>
 
-                <a href="#" class="project-link">
-                    Project →
-                </a>
 
-            </div>
+                <div class="project-card">
 
+                    <h3>Community Web System</h3>
 
-            <!-- PROJECT 5 -->
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    05
-                </div>
-
-                <h3>
-                    Community Web System
-                </h3>
-
-                <p>
-                    A proposed web-based community management system
-                    for announcements, complaints, facilities,
-                    and emergency alerts.
-                </p>
-
-                <div class="project-tags">
-
-                    <span>Web Development</span>
-                    <span>Database</span>
-                    <span>System Design</span>
+                    <p>
+                        A proposed community web system designed to manage
+                        announcements, emergency alerts, complaints,
+                        and community facilities.
+                    </p>
 
                 </div>
 
-                <a href="#" class="project-link">
-                    Project Proposal →
-                </a>
 
-            </div>
+                <div class="project-card">
 
+                    <h3>Personal Portfolio</h3>
 
-            <!-- PROJECT 6 -->
+                    <p>
+                        A personal portfolio website built using HTML,
+                        CSS, and JavaScript and deployed through GitHub Pages.
+                    </p>
 
-            <div class="project-card">
-
-                <div class="project-number">
-                    06
-                </div>
-
-                <h3>
-                    Personal Portfolio
-                </h3>
-
-                <p>
-                    This portfolio website created using HTML, CSS,
-                    and JavaScript and hosted through GitHub Pages.
-                </p>
-
-                <div class="project-tags">
-
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
+                    <a href="https://github.com/NideaAron/portfolio"
+                       target="_blank"
+                       class="project-link">
+                        View GitHub →
+                    </a>
 
                 </div>
-
-                <a href="#home" class="project-link">
-                    Current Website →
-                </a>
 
             </div>
 
@@ -544,86 +260,51 @@
     </section>
 
 
-    <!-- EDUCATION -->
-    <section id="education" class="section gray-section">
+    <!-- Education -->
+    <section id="education" class="section">
 
-        <div class="section-title">
+        <div class="container">
 
-            <p>
-                MY BACKGROUND
-            </p>
+            <h2 class="section-title">Education</h2>
 
-            <h2>
-                Education
-            </h2>
+            <div class="education-list">
 
-        </div>
+                <div class="education-card">
 
-
-        <div class="education-list">
-
-
-            <div class="education-card">
-
-                <div class="education-year">
-                    College
-                </div>
-
-                <div>
-
-                    <h3>
-                        Bachelor of Science in Information Technology
-                    </h3>
+                    <h3>Polytechnic University of the Philippines</h3>
 
                     <p>
-                        Polytechnic University of the Philippines
-                        – Calauan Campus
+                        Calauan Campus
                     </p>
 
                     <p>
-                        BSIT Student
+                        Bachelor of Science in Information Technology (BSIT)
                     </p>
 
                 </div>
 
-            </div>
 
+                <div class="education-card">
 
-            <div class="education-card">
-
-                <div class="education-year">
-                    Senior High
-                </div>
-
-                <div>
-
-                    <h3>
-                        Science, Technology, Engineering and Mathematics
-                    </h3>
+                    <h3>Liceo de Calauan</h3>
 
                     <p>
-                        Liceo de Calauan
+                        Senior High School — STEM Strand
+                    </p>
+
+                    <p>
+                        2023 – 2024
                     </p>
 
                 </div>
 
-            </div>
 
+                <div class="education-card">
 
-            <div class="education-card">
-
-                <div class="education-year">
-                    Junior High
-                </div>
-
-                <div>
-
-                    <h3>
-                        Junior High School
-                    </h3>
+                    <h3>Dayap National High School – Main Campus</h3>
 
                     <p>
-                        Dayap National High School – Main Campus
+                        2018 – 2022
                     </p>
 
                 </div>
@@ -635,51 +316,71 @@
     </section>
 
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section">
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
 
-        <div class="section-title">
+        <div class="container">
 
-            <p>
-                LET'S CONNECT
+            <h2 class="section-title">Contact Me</h2>
+
+            <p class="section-text">
+                Feel free to connect with me through my social media
+                accounts or GitHub.
             </p>
 
-            <h2>
-                Contact Me
-            </h2>
+
+            <div class="contact-buttons">
+
+                <a href="https://github.com/NideaAron"
+                   target="_blank"
+                   class="btn">
+                    GitHub
+                </a>
+
+
+                <a href="https://www.facebook.com/profile.php?id=100076665856304"
+                   target="_blank"
+                   class="btn">
+                    Facebook
+                </a>
+
+
+                <a href="https://www.instagram.com/_ey2kxs4"
+                   target="_blank"
+                   class="btn">
+                    Instagram
+                </a>
+
+
+                <a href="https://www.tiktok.com/@yk_ron44"
+                   target="_blank"
+                   class="btn">
+                    TikTok
+                </a>
+
+
+                <a href="mailto:aronnidea5@gmail.com"
+                   class="btn">
+                    Email
+                </a>
+
+            </div>
+
+
+            <p class="contact-email">
+                Email: aronnidea5@gmail.com
+            </p>
 
         </div>
-
-
-        <p>
-            You can view my projects and source code through my GitHub profile.
-        </p>
-
-
-        <div class="contact-links">
-    <a href="https://github.com/NideaAron" target="_blank">GitHub</a>
-
-    <a href="https://www.facebook.com/profile.php?id=100076665856304" target="_blank">Facebook</a>
-
-    <a href="https://www.instagram.com/_ey2kxs4" target="_blank">Instagram</a>
-
-    <a href="https://www.tiktok.com/@yk_ron44" target="_blank">TikTok</a>
-
-    <a href="mailto:aronnidea5@gmail.com">Email</a>
-</div>
 
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
 
         <p>
             © 2026 Aron Nidea. All Rights Reserved.
-        </p>
-
-        <p>
-            BSIT Student | Web Development | Database
         </p>
 
     </footer>
@@ -688,5 +389,4 @@
     <script src="script.js"></script>
 
 </body>
-
 </html>
