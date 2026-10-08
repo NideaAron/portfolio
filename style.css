@@ -1,11 +1,32 @@
 /* =========================
-   ANIMATED BACKGROUND
+   GENERAL
 ========================= */
 
-body {
-    position: relative;
-    overflow-x: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0d0d14;
+    color: #eeeeee;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   ANIMATED BACKGROUND
+========================= */
 
 body::before,
 body::after {
@@ -21,7 +42,7 @@ body::after {
 }
 
 body::before {
-    top: 10%;
+    top: 5%;
     left: -150px;
     background: #5555aa;
     animation: floatingCircle 10s ease-in-out infinite alternate;
@@ -29,7 +50,7 @@ body::before {
 
 body::after {
     right: -150px;
-    bottom: 10%;
+    bottom: 5%;
     background: #7777cc;
     animation: floatingCircle2 12s ease-in-out infinite alternate;
 }
@@ -64,34 +85,558 @@ body::after {
 
 
 /* =========================
-   BUTTON HOVER
+   NAVIGATION
 ========================= */
 
-.btn {
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(13, 13, 20, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(100, 100, 200, 0.3);
+.nav-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #cccccc;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8f8fff;
 }
 
 
 /* =========================
-   CARD HOVER
+   HERO
 ========================= */
 
-.skill-card,
-.project-card,
-.education-card {
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+.hero {
+    min-height: 100vh;
+    padding: 140px 25px 80px;
+
+    display: flex;
+    align-items: center;
 }
 
-.skill-card:hover,
-.project-card:hover,
-.education-card:hover {
+.hero-content {
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.greeting {
+    color: #8888dd;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    color: #aaaaff;
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.intro {
+    max-width: 650px;
+    color: #bcbcc7;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+/* =========================
+   PROFILE PHOTO
+========================= */
+
+.hero-photo {
+    width: 350px;
+    height: 350px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 3px solid #5555aa;
+
+    box-shadow:
+        0 0 40px rgba(100, 100, 200, 0.25);
+
+    animation: photoFloat 5s ease-in-out infinite;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes photoFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    background: #5555aa;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border: 1px solid #6666bb;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+
+    background: #6666bb;
+
+    box-shadow:
+        0 8px 25px rgba(100, 100, 200, 0.3);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #5555aa;
+}
+
+.secondary-btn:hover {
+    background: #5555aa;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 100px 25px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+
+    width: 50px;
+    height: 3px;
+
+    margin: 12px auto 0;
+
+    background: #6666bb;
+}
+
+.section-text {
+    max-width: 850px;
+    margin: 0 auto 18px;
+
+    text-align: center;
+
+    color: #bcbcc7;
+    font-size: 16px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.skill-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(100, 100, 200, 0.18);
+
+    border-color: #6666bb;
+
+    box-shadow:
+        0 10px 30px rgba(100, 100, 200, 0.18);
+}
+
+.skill-card h3 {
+    color: #aaaaff;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #aaaaaf;
+    font-size: 14px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    padding: 28px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #6666bb;
+
+    box-shadow:
+        0 10px 30px rgba(100, 100, 200, 0.18);
+}
+
+.project-card h3 {
+    color: #aaaaff;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.project-card p {
+    color: #b5b5c0;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.project-link {
+    color: #9999ff;
+    font-weight: bold;
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.project-link:hover {
+    color: #ffffff;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-list {
+    max-width: 800px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.education-card {
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border-left: 3px solid #6666bb;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateX(6px);
+
+    box-shadow:
+        0 8px 25px rgba(100, 100, 200, 0.15);
+}
+
+.education-card h3 {
+    color: #aaaaff;
+    margin-bottom: 8px;
+}
+
+.education-card p {
+    color: #bcbcc7;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.contact-email {
+    margin-top: 25px;
+
+    color: #aaaab5;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #777780;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-container {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .hero-photo {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-top: 160px;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .hero-photo {
+        width: 230px;
+        height: 230px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-buttons .btn {
+        width: 200px;
+    }
+
 }
