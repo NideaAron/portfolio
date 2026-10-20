@@ -56,12 +56,16 @@
   }
 
   /* scroll reveal */
-  const io = new IntersectionObserver((entries, obs) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-    });
-  }, { threshold: .15 });
-  $$('.reveal').forEach(el => io.observe(el));
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: .15 });
+    $$('.reveal').forEach(el => io.observe(el));
+  } else {
+    $$('.reveal').forEach(el => el.classList.add('visible'));
+  }
 
   /* scroll progress, nav shadow, back-to-top, education line */
   const bar = $('#progress'), nav = $('#nav'), toTop = $('#toTop'), tl = $('.timeline');

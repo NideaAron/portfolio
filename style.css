@@ -180,3 +180,45 @@ footer{text-align:center;padding:2rem 6vw;border-top:1px solid var(--line);color
   .reveal,.name span,.hero h2,.hero .lead,.hero .btns{opacity:1;transform:none}
   .title::after{transform:scaleX(1)}
 }
+
+
+/* Portfolio polish: portrait, responsive spacing, and accessible motion */
+.photo{
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 25%,transparent),
+             0 22px 60px color-mix(in srgb,var(--accent) 18%,transparent);
+  transition:box-shadow .35s ease, transform .35s ease;
+}
+.photo:hover{
+  box-shadow:0 0 0 2px var(--accent),
+             0 24px 70px color-mix(in srgb,var(--accent) 30%,transparent);
+}
+.photo img{object-position:center center}
+.hero-side{min-width:0}
+.editor{min-width:0}
+.nav nav a:focus-visible,.btn:focus-visible,.chip:focus-visible,.theme-btn:focus-visible,.menu-btn:focus-visible{
+  outline:3px solid var(--accent);outline-offset:4px
+}
+@media(max-width:600px){
+  section{padding:4rem 5vw}
+  .nav{padding:.7rem 5vw}
+  .nav nav{padding:.8rem 5vw 1rem}
+  .hero{gap:2rem;padding-top:2.5rem}
+  .name{font-size:clamp(2.8rem,15vw,4.4rem)}
+  .hero .btns{display:grid;grid-template-columns:1fr;align-items:stretch}
+  .hero .btns .btn{width:100%;text-align:center}
+  .photo{width:min(250px,68vw);padding:5px}
+  .editor pre{font-size:.76rem;padding:.9rem;overflow-wrap:anywhere}
+  .skills{grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+  .skill{padding:1rem;min-width:0}
+  .skill h3{font-size:1rem;overflow-wrap:anywhere}
+  .skill p{font-size:.72rem}
+  .projects{grid-template-columns:minmax(0,1fr);gap:1rem}
+  .card{padding:1.2rem}
+  #contact .btns{gap:.6rem}
+  #contact .btn{padding:.65rem 1rem}
+  .to-top{right:1rem;bottom:1rem}
+}
+@media(min-width:601px) and (max-width:860px){
+  .skills{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .projects{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
