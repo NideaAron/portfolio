@@ -129,7 +129,7 @@
     const ctx = canvas.getContext('2d');
     if (ctx) {
       let width = 0, height = 0, particles = [], raf = 0;
-      const colors = ['139, 124, 255', '255, 255, 255', '108, 92, 231'];
+      const colors = ['190, 193, 200', '235, 236, 239', '125, 129, 137'];
       const resize = () => {
         const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
         width = window.innerWidth; height = window.innerHeight;
@@ -154,7 +154,7 @@
           for(let j=i+1;j<particles.length;j++){
             const q=particles[j], dx=p.x-q.x, dy=p.y-q.y, d=Math.hypot(dx,dy);
             if(d<maxDist){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);
-              ctx.strokeStyle=`rgba(139,124,255,${(1-d/maxDist)*.20})`;ctx.lineWidth=.7;ctx.stroke();}
+              ctx.strokeStyle=`rgba(175,179,187,${(1-d/maxDist)*.12})`;ctx.lineWidth=.7;ctx.stroke();}
           }
         }
         raf=requestAnimationFrame(draw);
